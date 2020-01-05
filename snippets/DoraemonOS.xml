@@ -7,7 +7,7 @@
 
   <!-- CodeAurora additions -->
   <project path="device/qcom/sepolicy" name="android_device_qcom_sepolicy" remote="dora" />
-  <project path="device/qcom/sepolicy-legacy-um" name="android_device_qcom_sepolicy" revision="ten-legacy-um" remote="dora" />
+  <project path="device/qcom/sepolicy-legacy-um" name="android_device_qcom_sepolicy" revision="Quiche-legacy-um" remote="dora" />
   <project path="hardware/qcom-caf/msm8996/audio" name="android_hardware_qcom-caf_msm8996_audio" remote="dora" />
   <project path="hardware/qcom-caf/msm8998/audio" name="android_hardware_qcom-caf_msm8998_audio" remote="dora" />
   <project path="hardware/qcom-caf/sm8150/audio" name="android_hardware_qcom-caf_sm8150_audio" remote="dora" />
