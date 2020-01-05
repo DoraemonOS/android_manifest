@@ -52,7 +52,7 @@
   <project path="manifest" name="android_manifest" remote="dora" />
   <project path="platform_testing" name="android_platform_testing" remote="dora" />
   <project path="vendor/aosp" name="android_vendor_doraemon" remote="dora" />
-  <project path="vendor/pixelstyle" name="vendor_pixelstyle" remote="dora" />
+  <project path="vendor/pixelstyle" name="android_vendor_pixelstyle" remote="dora" />
 
   <!-- Hardware repos -->
   <project path="hardware/custom/interfaces" name="android_hardware_doraemon_interfaces" remote="dora" />
