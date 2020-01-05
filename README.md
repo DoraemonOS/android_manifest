@@ -60,6 +60,7 @@ mka bacon -j$(nproc --all)
  * [**AOSiP**](https://github.com/aosip)
  * [**bootlegger**](https://github.com/BootleggersROM)
  * [**AOSP**](https://android.googlesource.com)
+ * [**CherishOS**](https://github.com/CherishOS)
  
  # Doraemon Maintainer #
  * [**Nobi Nobita**](https://github.com/dopaemon)
