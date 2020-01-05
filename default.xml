@@ -792,9 +792,12 @@
   <include name="snippets/remove.xml" />
 
   <!-- Add some LineageOS repos -->
-  <include name="snippets/lineage.xml" />
+  <include name="snippets/LineageOS.xml" />
 
-  <!-- Add all PixelExperience repos -->
-  <include name="snippets/pixel.xml" />
+  <!-- Add all DoraemonOS repos -->
+  <include name="snippets/DoraemonOS.xml" />
+
+  <!-- Add all Out Repo -->
+  <include name="snippets/Out.xml" />
 
 </manifest>

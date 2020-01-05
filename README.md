@@ -1,72 +1,68 @@
-# Pixel Experience #
+# DoraemonOS #
 
-### Sync ###
+<img src="https://raw.githubusercontent.com/DoraemonOS/android_manifest/Quiche/DoraemonOS.jpeg"> 
+
+Getting Started:
+===============
+To get started with the building process, you'll need to get familiar with [Git and Repo](http://source.android.com/source/using-repo.html).
+
+OS : Ubuntu ( Debian ) 64Bit ( Version 14. )
+
+Package : 
+```bash
+sudo apt-get install git-core gnupg flex bison gperf build-essential zip curl zlib1g-dev gcc-multilib g++-multilib libc6-dev-i386 lib32ncurses5-dev x11proto-core-dev libx11-dev lib32z-dev libgl1-mesa-dev libxml2-utils xsltproc unzip
+```
+
+
+To initialize your local repository, use a command like this:
 
 ```bash
-
-# Initialize local repository
-repo init -u https://github.com/PixelExperience/manifest -b ten
-
-# Sync
-repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
+    repo init -u https://github.com/DoraemonOS/android_manifest.git -b Quiche
 ```
 
-### Build ###
+Then to sync up:
+================
 
 ```bash
-
-# Set up environment
-$ . build/envsetup.sh
-
-# Choose a target
-$ lunch aosp_$device-userdebug
-
-# Build the code
-$ mka bacon -jX
+    repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
 ```
 
-### Submitting Patches ###
-
-Patches are always welcome!  Please submit your patches to our Gerrit.
-
-To start contributing, just register at https://gerrit.pixelexperience.org
-
-Open up terminal to create your ssh keys required for submitting patches to gerrit and type in:
+Additionally, you can define the number of parallel download repo should do:
 
 ```bash
-git config --global review.gerrit.pixelexperience.org.username <username you registered with>
-
-git config --global review.gerrit.pixelexperience.org.email <your email you registered with>
-
-ssh-keygen -t rsa -C "your@email.com"
+    repo sync -f -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
 ```
 
-In our gerrit click on your "Avatar" on the top right, then on "Settings".
+Compilation of DoraemonOS :
+====================
 
-While in 'Settings' Click on "SSH Public Keys" on the left hand side and then on "Add Key".
+From root directory of Project, perform following commands in terminal
 
-Now on your computer navigate to your home "~/.ssh" and open up "id_rsa.pub", copy/paste the context to "Gerrit SSH Public Keys".
 
-You can send patches to us by using these commands in terminal:
-
+```bash
+source build/envsetup.sh
 ```
-    (From root android directory)
-    . build/envsetup.sh
-    (Go to repo you are patching, make your changes and commit)
-    pixelgerrit push ten
-
-    or
-
-    git push ssh://<username>@gerrit.pixelexperience.org:29418/<project> HEAD:refs/for/<branch>
+```bash
+lunch aosp_<devicecodename>-userdebug
 ```
+```bash
+mka bacon -j$(nproc --all)
+```
+-----------------------------------------------------------------------------
 
-* `<username>` - Your Gerrit username (which can be seen/set [here](https://gerrit.pixelexperience.org/#/settings/))
-* `<project>` - The git repo you are pushing to; all options can be viewed at [this link](https://gerrit.pixelexperience.org/#/admin/projects/)
-* `<branch>` - The git branch your change is based on; for projects using this manifest, it is `ten`
+ Credits:
+=======
+ * [**CyanogenMod**](https://github.com/Cyanogenmod)
+ * [**LineageOS**](https://github.com/LineageOS)
+ * [**LotusOS**](https://github.com/Lotus-OS)
+ * [**pixel experience**](https://github.com/pixelexperience)
+ * [**Cosmic**](https://github.com/Cosmic-OS)
+ * [**AOSiP**](https://github.com/aosip)
+ * [**bootlegger**](https://github.com/BootleggersROM)
+ * [**AOSP**](https://android.googlesource.com)
+ 
+ # Doraemon Maintainer #
+ * [**Nobi Nobita**](https://github.com/dopaemon)
 
-Make your changes and commit with a detailed message, starting with what you are working with
-Commit your patches in a single commit. Squash multiple commits using this command: `git rebase -i HEAD~<# of commits>`
 
-For more help, use this commands: `pixelgerrit help` or `pixelrebase help`
 
-[View Code Review](https://gerrit.pixelexperience.org/)
