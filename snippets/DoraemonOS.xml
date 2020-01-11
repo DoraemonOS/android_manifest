@@ -51,7 +51,7 @@
   <project path="device/custom/sepolicy" name="android_device_doraemon_sepolicy" remote="dora" />
   <project path="manifest" name="android_manifest" remote="dora" />
   <project path="platform_testing" name="android_platform_testing" remote="dora" />
-  <project path="vendor/aosp" name="android_vendor_doraemon" remote="dora" />
+  <project path="vendor/doraemon" name="android_vendor_doraemon" remote="dora" />
   <project path="vendor/pixelstyle" name="android_vendor_pixelstyle" remote="dora" />
 
   <!-- Hardware repos -->
