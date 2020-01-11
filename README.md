@@ -64,6 +64,7 @@ mka bacon -j$(nproc --all)
  
  # Doraemon Maintainer #
  * [**Nobi Nobita**](https://github.com/dopaemon)
+ * [**Đinh Trọng San - dinh san**](https://github.com/dinhsan2000)
 
 
 
