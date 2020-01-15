@@ -43,7 +43,7 @@ From root directory of Project, perform following commands in terminal
 source build/envsetup.sh
 ```
 ```bash
-lunch aosp_<devicecodename>-userdebug
+lunch doraemon_<devicecodename>-userdebug
 ```
 ```bash
 mka bacon -j$(nproc --all)
