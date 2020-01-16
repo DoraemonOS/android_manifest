@@ -132,6 +132,9 @@ From root directory of Project, perform following commands in terminal
 
 Use Ccache :
 ```bash
+   ccache -M 50G ( For 50Gb )
+```
+```bash
    export USE_CCACHE=1
 ```
 ```bash
