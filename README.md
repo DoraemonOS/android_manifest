@@ -41,7 +41,7 @@ And :
 ```
 And :
 ```bash
-   sudo apt-get install -y build-essential kernel-package libncurses5-dev bzip2 android-liblog android-libbacktrace libtinyxml2-6 android-libutils android-sdk-build-tools git-lfs libncurses5:i386 libncurses5
+   sudo apt-get install -y build-essential kernel-package libncurses5-dev bzip2 android-liblog android-libbacktrace libtinyxml2-6 android-libutils android-sdk-build-tools git-lfs libncurses5:i386 libncurses5 ccache
 ```
 
 Repo Sync :
@@ -129,6 +129,20 @@ Compilation of DoraemonOS :
 ====================
 
 From root directory of Project, perform following commands in terminal
+
+Use Ccache :
+```bash
+   export USE_CCACHE=1
+```
+```bash
+   export CCACHE_DIR=ccache
+```
+```bash
+   export ANDROID_JACK_VM_ARGS="-Dfile.encoding=UTF-8 -XX:+TieredCompilation -Xmx4G"
+```
+```bash
+   export LC_ALL=C
+```
 
 Source Terminal :
 ```bash
