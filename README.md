@@ -1,6 +1,6 @@
 # DoraemonOS #
 
-<img src="https://raw.githubusercontent.com/DoraemonOS/android_manifest/Quiche/Doraemon.jpeg"> 
+<img src="https://raw.githubusercontent.com/DoraemonOS/android_manifest/Quiche/DoraemonOS.jpeg"> 
 
 Getting Started :
 ===============
