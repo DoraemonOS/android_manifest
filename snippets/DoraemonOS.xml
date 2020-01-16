@@ -96,6 +96,6 @@
   <project path="system/vold" name="android_system_vold" remote="dora" />
   
   <!-- System Packages -->
-  <project path="vendor/application" name="android_vendor_application" remote="dora" />
+  <!-- <project path="vendor/application" name="android_vendor_application" remote="dora" /> -->
 
 </manifest>
