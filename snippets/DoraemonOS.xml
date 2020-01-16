@@ -94,5 +94,8 @@
   <project path="system/netd" name="android_system_netd" remote="dora" />
   <project path="system/sepolicy" name="android_system_sepolicy" remote="dora" />
   <project path="system/vold" name="android_system_vold" remote="dora" />
+  
+  <!-- System Packages -->
+  <project path="vendor/application" name="android_vendor_application" remote="dora" />
 
 </manifest>
