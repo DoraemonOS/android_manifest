@@ -46,6 +46,14 @@ And :
 
 Repo Sync :
 ===========
+
+Github Config Accmount :
+```bash
+   git config --global user.name "FIRST_NAME LAST_NAME"
+```
+```bash
+   git config --global user.email "MY_NAME@example.com"
+```
 Bin :
 ```bash
    mkdir ~/bin
