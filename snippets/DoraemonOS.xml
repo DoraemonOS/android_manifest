@@ -97,5 +97,8 @@
   
   <!-- System Packages -->
   <!-- <project path="vendor/application" name="android_vendor_application" remote="dora" /> -->
+  
+  <!-- Packages Apps Doraemon -->
+  <project path="packages/apps/doraemon" name="android_packages_apps_doraemon" remote="dora" />
 
 </manifest>
