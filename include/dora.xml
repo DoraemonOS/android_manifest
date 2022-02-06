@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote name="pixel"
+          fetch="https://github.com/PixelExperience"
+          revision="twelve" />
+
+  <remote name="dora"
+          fetch="https://github.com/DoraemonOS"
+          revision="12" />
+
+  <remote name="pixel-gitlab"
+          fetch="https://gitlab.com/PixelExperience"
+          revision="twelve" />
+
+  <remote name="pixel-gitlab-self-hosted"
+          fetch="https://gitlab.pixelexperience.org/android"
+          revision="twelve" />
+
+  <remote name="pixel-devices"
+          fetch="https://github.com/PixelExperience-Devices"
+          revision="twelve" />
+
+  <remote name="pixel-devices-blobs"
+          fetch="https://gitlab.pixelexperience.org/android/vendor-blobs"
+          revision="twelve" />
+
+  <!-- Framework repos -->
+  <project path="frameworks/av" name="android_frameworks_av" remote="dora" />
+  <project path="frameworks/base" name="android_frameworks_base" remote="dora" />
+  <project path="frameworks/native" name="android_frameworks_native" remote="dora" />
+  <project path="frameworks/opt/net/ims" name="android_frameworks_opt_net_ims" remote="dora" />
+  <project path="frameworks/opt/net/wifi" name="android_frameworks_opt_net_wifi" remote="dora" />
+  <project path="frameworks/opt/telephony" name="android_frameworks_opt_telephony" remote="dora" />
+  <project path="frameworks/opt/timezonepicker" name="android_frameworks_opt_timezonepicker" remote="dora" />
+
+  <!-- General repos -->
+  <project path="art" name="android_art" remote="dora" />
+  <project path="bionic" name="android_bionic" remote="dora" />
+  <project path="build/make" name="android_build_make" remote="dora">
+    <copyfile src="core/root.mk" dest="Makefile" />
+    <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
+    <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
+    <linkfile src="core" dest="build/core" />
+    <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
+    <linkfile src="target" dest="build/target" />
+    <linkfile src="tools" dest="build/tools" />
+  </project>
+  <project path="build/soong" name="android_build_soong" remote="dora" >
+    <linkfile src="root.bp" dest="Android.bp" />
+    <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
+  </project>
+  <project path="build/blueprint" name="android_build_blueprint" remote="dora" />
+  <project path="bootable/recovery" name="android_bootable_recovery" remote="dora" />
+  <project path="manifest" name="android_manifest" remote="dora" />
+  <project path="platform_testing" name="android_platform_testing" remote="dora" />
+
+  <!-- Packages repos -->
+  <project path="packages/apps/Bluetooth" name="android_packages_apps_Bluetooth" remote="dora" />
+  <project path="packages/apps/Camera2" name="android_packages_apps_Camera2" remote="dora" />
+  <project path="packages/apps/CarrierConfig" name="android_packages_apps_CarrierConfig" remote="dora" />
+  <project path="packages/apps/Nfc" name="android_packages_apps_Nfc" remote="dora" />
+  <project path="packages/apps/PhoneCommon" name="android_packages_apps_PhoneCommon" remote="dora" />
+  <project path="packages/apps/Settings" name="android_packages_apps_Settings" remote="dora" />
+  <project path="packages/apps/Stk" name="android_packages_apps_Stk" remote="dora" />
+  <project path="packages/apps/Traceur" name="android_packages_apps_Traceur" remote="dora" />
+  <project path="packages/modules/adb" name="android_packages_modules_adb" remote="dora" />
+  <project path="packages/modules/Connectivity" name="android_packages_modules_Connectivity" remote="dora" />
+  <project path="packages/modules/DnsResolver" name="android_packages_modules_DnsResolver" remote="dora" />
+  <project path="packages/modules/NetworkStack" name="android_packages_modules_NetworkStack" remote="dora" />
+  <project path="packages/providers/DownloadProvider" name="android_packages_providers_DownloadProvider" remote="dora" />
+  <project path="packages/providers/MediaProvider" name="android_packages_providers_MediaProvider" remote="dora" />
+  <project path="packages/services/BuiltInPrintService" name="android_packages_services_BuiltInPrintService" remote="dora" />
+  <project path="packages/services/Telecomm" name="android_packages_services_Telecomm" remote="dora" />
+  <project path="packages/services/Telephony" name="android_packages_services_Telephony" remote="dora" />
+
+  <!-- System Repos -->
+  <project path="system/bpf" name="android_system_bpf" remote="dora" />
+  <project path="system/bt" name="android_system_bt" remote="dora" />
+  <project path="system/core" name="android_system_core" remote="dora" />
+  <project path="system/incremental_delivery" name="android_system_incremental_delivery" remote="dora" />
+  <project path="system/libhwbinder" name="android_system_libhwbinder" remote="dora" />
+  <project path="system/libufdt" name="android_system_libufdt" remote="dora" />
+  <project path="system/libziparchive" name="android_system_libziparchive" remote="dora" />
+  <project path="system/media" name="android_system_media" remote="dora" />
+  <project path="system/netd" name="android_system_netd" remote="dora" />
+  <project path="system/nfc" name="android_system_nfc" remote="dora" />
+  <project path="system/security" name="android_system_security" remote="dora" />
+  <project path="system/sepolicy" name="android_system_sepolicy" remote="dora" />
+  <project path="system/timezone" name="android_system_timezone" remote="dora" />
+  <project path="system/tools/hidl" name="android_system_tools_hidl" remote="dora" />
+  <project path="system/tools/mkbootimg" name="android_system_tools_mkbootimg" remote="dora" />
+  <project path="system/update_engine" name="android_system_update_engine" remote="dora" />
+  <project path="system/vold" name="android_system_vold" remote="dora" />
+
+  <!-- Extra Repos -->
+  <project path="prebuilts/build-tools" name="android_prebuilts_build-tools" remote="dora" clone-depth="1" />
+  <project path="device/dora/sepolicy" name="android_device_dora_sepolicy" remote="dora" />
+  <project path="vendor/dora" name="android_vendor_dora" remote="dora" />
+  <project path="vendor/dora-preference" name="android_vendor_dora-preference" remote="dora" />
+  <project path="vendor/pixel-framework" name="android_vendor_pixel-framework" remote="dora" />
+  <project path="hardware/dora/interfaces" name="android_hardware_dora_interfaces" remote="dora" />
+  <project path="hardware/broadcom/nfc" name="android_hardware_broadcom_nfc" remote="dora" />
+  <!--project path="packages/apps/FaceUnlockService" name="android_packages_apps_FaceUnlockService" remote="dora" /-->
+  <project path="packages/apps/FMRadio" name="android_packages_apps_FMRadio" remote="dora" />
+  <project path="packages/apps/SimpleDeviceConfig" name="android_packages_apps_SimpleDeviceConfig" remote="dora" />
+  <!--project path="packages/apps/Snap" name="android_packages_apps_Snap" remote="dora" /-->
+  <project path="packages/apps/Updates" name="android_packages_apps_Updates" remote="dora" />
+  <project path="packages/apps/TouchGestures" name="android_packages_apps_TouchGestures" remote="dora" />
+  <project path="device/qcom/sepolicy" name="android_device_qcom_sepolicy" remote="dora" />
+  <project path="device/qcom-LA.UM.10.3.r1-xxxxx-sdm845.0/sepolicy" name="android_device_qcom_sepolicy" remote="dora" revision="12-LA.UM.10.3.r1-xxxxx-sdm845.0" />
+  <project path="device/qcom/sepolicy-legacy" name="android_device_qcom_sepolicy-legacy" remote="dora" />
+  <project path="device/qcom/sepolicy-legacy-um" name="android_device_qcom_sepolicy-legacy-um" remote="dora" />
+  <project path="device/qcom/sepolicy_vndr" name="android_device_qcom_sepolicy_vndr" remote="dora" />
+  <project path="device/qcom-LA.UM.10.3.r1-xxxxx-sdm845.0/sepolicy_vndr" name="android_device_qcom_sepolicy_vndr" remote="dora" revision="12-LA.UM.10.3.r1-xxxxx-sdm845.0" />
+  <project path="prebuilts/tools-dora" name="android_prebuilts_tools-dora" remote="dora" clone-depth="1" />
+  <project path="prebuilts/extract-tools" name="android_prebuilts_extract-tools" remote="dora" clone-depth="1" />
+
+</manifest>
