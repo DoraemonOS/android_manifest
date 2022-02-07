@@ -90,7 +90,7 @@
   <project path="system/timezone" name="android_system_timezone" remote="dora" />
   <project path="system/tools/hidl" name="android_system_tools_hidl" remote="dora" />
   <project path="system/tools/mkbootimg" name="android_system_tools_mkbootimg" remote="dora" />
-  <!-- <project path="system/update_engine" name="android_system_update_engine" remote="dora" /> -->
+  <project path="system/update_engine" name="android_system_update_engine" remote="dora" />
   <project path="system/vold" name="android_system_vold" remote="dora" />
 
   <!-- Extra Repos -->
