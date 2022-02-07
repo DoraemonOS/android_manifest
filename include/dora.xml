@@ -90,14 +90,14 @@
   <project path="system/timezone" name="android_system_timezone" remote="dora" />
   <project path="system/tools/hidl" name="android_system_tools_hidl" remote="dora" />
   <project path="system/tools/mkbootimg" name="android_system_tools_mkbootimg" remote="dora" />
-  <project path="system/update_engine" name="android_system_update_engine" remote="dora" />
+  <!-- <project path="system/update_engine" name="android_system_update_engine" remote="dora" /> -->
   <project path="system/vold" name="android_system_vold" remote="dora" />
 
   <!-- Extra Repos -->
   <project path="prebuilts/build-tools" name="android_prebuilts_build-tools" remote="dora" clone-depth="1" />
   <project path="device/dora/sepolicy" name="android_device_dora_sepolicy" remote="dora" />
   <project path="vendor/dora" name="android_vendor_dora" remote="dora" />
-  <project path="vendor/dora-preference" name="android_vendor_dora-preference" remote="dora" />
+  <!-- <project path="vendor/dora-preference" name="android_vendor_dora-preference" remote="dora" /> -->
   <project path="vendor/pixel-framework" name="android_vendor_pixel-framework" remote="dora" />
   <project path="hardware/dora/interfaces" name="android_hardware_dora_interfaces" remote="dora" />
   <project path="hardware/broadcom/nfc" name="android_hardware_broadcom_nfc" remote="dora" />
@@ -105,7 +105,7 @@
   <project path="packages/apps/FMRadio" name="android_packages_apps_FMRadio" remote="dora" />
   <project path="packages/apps/SimpleDeviceConfig" name="android_packages_apps_SimpleDeviceConfig" remote="dora" />
   <!--project path="packages/apps/Snap" name="android_packages_apps_Snap" remote="dora" /-->
-  <project path="packages/apps/Updates" name="android_packages_apps_Updates" remote="dora" />
+  <!-- <project path="packages/apps/Updates" name="android_packages_apps_Updates" remote="dora" /> -->
   <project path="packages/apps/TouchGestures" name="android_packages_apps_TouchGestures" remote="dora" />
   <project path="device/qcom/sepolicy" name="android_device_qcom_sepolicy" remote="dora" />
   <project path="device/qcom-LA.UM.10.3.r1-xxxxx-sdm845.0/sepolicy" name="android_device_qcom_sepolicy" remote="dora" revision="12-LA.UM.10.3.r1-xxxxx-sdm845.0" />
