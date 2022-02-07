@@ -36,15 +36,19 @@ Tested on Ubuntu 20.04:
 ```bash
 sudo apt install openjdk-8-jdk python bc bison build-essential ccache curl flex g++-multilib gcc-multilib git gnupg gperf imagemagick lib32ncurses5-dev lib32readline-dev lib32z1-dev liblz4-tool libncurses5-dev libsdl1.2-dev libssl-dev libwxgtk3.0-gtk3-dev libxml2 libxml2-utils lzop pngcrush rsync schedtool squashfs-tools xsltproc zip zlib1g-dev
 ```
+You need Linker python3:
+```bash
+sudo ln -s /usr/bin/python3 /usr/bin/python
+```
 Repo Sync :
 ===========
 
 Github Config Accmount :
 ```bash
-git config --global user.name "USERNAME"
+git config --global user.name "username"
 ```
 ```bash
-git config --global user.email "MY_NAME@example.com"
+git config --global user.email "username@example.com"
 ```
 Bin :
 ```bash
@@ -186,13 +190,13 @@ mka bacon -j$(nproc --all)
  * [**CherishOS**](https://github.com/CherishOS)
  * [**LotusOS**](https://github.com/Lotus-OS)
  * [**Pixel Experience**](https://github.com/pixelexperience)
- * [**ProtonAOSP**](https://github.com/ProtonAOSP)
+ * [**Proton AOSP**](https://github.com/ProtonAOSP)
  * [**GrapheneOS**](https://github.com/GrapheneOS)
  * [**CalyxOS**](https://gitlab.com/CalyxOS)
  * [**ABC**](https://github.com/ezio84)
  * [**Cosmic**](https://github.com/Cosmic-OS)
  * [**AOSiP**](https://github.com/aosip)
  * [**bootlegger**](https://github.com/BootleggersROM)
- * [**CherishOS**](https://github.com/CherishOS)
+ * [**DerpFest 12**](https://github.com/DerpFest-12)
  * [**AOSP**](https://android.googlesource.com)
- * [**Some AOSP Custom Projects**]
+ * [**Some AOSP Custom Projects**](https://github.com/)
