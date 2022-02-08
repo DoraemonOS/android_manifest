@@ -44,6 +44,9 @@ sudo apt install openjdk-8-jdk python bc bison build-essential ccache curl flex 
 ```
 You need Linker python3:
 ```bash
+sudo mv /usr/bin/python /usr/bin/python2
+```
+```bash
 sudo ln -s /usr/bin/python3 /usr/bin/python
 ```
 Repo Sync :
