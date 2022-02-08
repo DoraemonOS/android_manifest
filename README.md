@@ -8,10 +8,16 @@ To get started with the building process, you'll need to get familiar with [Git 
 
 Minimum computer :
 ```bash
-[CPU Intel | AMD] [X86_64] [Min 8 Core]
+[CPU Intel | AMD] [64Bit] [Min 8 Core]
 [Ram] [Min 16Gb]
-[SSD|HDD] [320Gb] 
-[OS] [Ubuntu 14.04 64Bit] | [Ubuntu 16.04 64Bit] | [Ubuntu 18.04 64Bit] | [Ubuntu 19.04 64Bit] | [Ubuntu 20.04 64Bit] | [Ubuntu 21.04 64Bit] | [Later Versions 64Bit] | [Debian 64Bit]
+[SSD | HDD | nvme] (Min[320Gb])
+[Ubuntu 14.04 64Bit]
+To
+[Ubuntu 21.04 64Bit]
+Or
+[Later Ubuntu Versions 64Bit]
+Or
+[Debian 64Bit]
 ```
 
 Package : 
@@ -50,18 +56,15 @@ git config --global user.name "username"
 ```bash
 git config --global user.email "username@example.com"
 ```
-Bin :
+Install repo [ bin folder ]
 ```bash
-mkdir ~/bin
+curl https://storage.googleapis.com/git-repo-downloads/repo > ~/repo
 ```
 ```bash
-PATH=~/bin:$PATH
-``` 
-```bash
-curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
+chmod a+x ~/repo
 ```
 ```bash
-chmod a+x ~/bin/repo
+sudo mv ~/repo /usr/bin/
 ```
 
 To initialize your local repository, use a command like this:
@@ -126,19 +129,7 @@ Compilation of DoraemonOS :
 
 From root directory of Project, perform following commands in terminal
 
-Use Ccache :
-```bash
-ccache -M 50G ( For 50Gb )
-```
-```bash
-export USE_CCACHE=1
-```
-```bash
-export CCACHE_DIR=ccache
-```
-```bash
-export ANDROID_JACK_VM_ARGS="-Dfile.encoding=UTF-8 -XX:+TieredCompilation -Xmx4G"
-```
+If you use Ubuntu 18.04 i think you need this:
 ```bash
 export LC_ALL=C
 ```
