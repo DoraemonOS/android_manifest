@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote name="Dora"
+          fetch="https://github.com/DoraemonOS"
+          revision="12" />
+
+  <remote name="PEH"
+          fetch="https://github.com/PixelExperience"
+          revision="twelve" />
+
+  <!-- External repos -->
+  <project path="external/boringssl" name="external_boringssl" remote="PEH" />
+  <project path="external/cldr" name="external_cldr" remote="PEH" />
+  <project path="external/e2fsprogs" name="external_e2fsprogs" remote="PEH" />
+  <project path="external/gptfdisk" name="external_gptfdisk" remote="PEH" />
+  <project path="external/guice" name="external_guice" remote="PEH" />
+  <project path="external/icu" name="external_icu" remote="PEH" />
+  <project path="external/libcxx" name="external_libcxx" remote="PEH" />
+  <project path="external/mksh" name="external_mksh" remote="PEH" />
+  <project path="external/perfetto" name="external_perfetto" remote="PEH" />
+  <project path="external/selinux" name="external_selinux" remote="PEH" />
+  <project path="external/tinyalsa" name="external_tinyalsa" remote="PEH" />
+  <project path="external/tinycompress" name="external_tinycompress" remote="PEH" />
+  <project path="external/toybox" name="external_toybox" remote="PEH" />
+  <project path="external/wpa_supplicant_8" name="external_wpa_supplicant_8" remote="PEH" />
+  <project path="external/ant-wireless/ant_client" name="external_ant-wireless_ant_client" remote="PEH" />
+  <project path="external/ant-wireless/ant_native" name="external_ant-wireless_ant_native" remote="PEH" />
+  <project path="external/ant-wireless/ant_service" name="external_ant-wireless_ant_service" remote="PEH" />
+  <project path="external/ant-wireless/hidl" name="external_ant-wireless_hidl" remote="PEH" />
+  <!--project path="external/faceunlock" name="external_faceunlock" remote="PEH-gitlab-self-hosted" /-->
+  <project path="external/bson" name="external_bson" remote="PEH" />
+  <project path="external/connectivity" name="external_connectivity" remote="PEH" />
+  <project path="external/exfatprogs" name="external_exfatprogs" remote="PEH" />
+  <project path="external/json-c" name="external_json-c" remote="PEH" />
+  <project path="external/libnfc-nxp" name="external_libnfc-nxp" remote="PEH" />
+  <project path="external/ntfs-3g" name="external_ntfs-3g" remote="PEH" />
+  <project path="external/tinyxml" name="external_tinyxml" remote="PEH" />
+
+  <!-- Framework repos -->
+  <project path="frameworks/av" name="android_frameworks_av" remote="Dora" />
+  <project path="frameworks/base" name="android_frameworks_base" remote="Dora" />
+  <project path="frameworks/native" name="android_frameworks_native" remote="Dora" />
+  <project path="frameworks/opt/net/ims" name="android_frameworks_opt_net_ims" remote="Dora" />
+  <project path="frameworks/opt/net/wifi" name="android_frameworks_opt_net_wifi" remote="Dora" />
+  <project path="frameworks/opt/telephony" name="android_frameworks_opt_telephony" remote="Dora" />
+  <project path="frameworks/opt/timezonepicker" name="android_frameworks_opt_timezonepicker" remote="Dora" />
+
+  <!-- General repos -->
+  <project path="art" name="android_art" remote="Dora" />
+  <project path="bionic" name="android_bionic" remote="Dora" />
+  <project path="build/make" name="android_build" remote="Dora">
+    <copyfile src="core/root.mk" dest="Makefile" />
+    <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
+    <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
+    <linkfile src="core" dest="build/core" />
+    <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
+    <linkfile src="target" dest="build/target" />
+    <linkfile src="tools" dest="build/tools" />
+  </project>
+  <project path="build/soong" name="android_build_soong" remote="Dora" >
+    <linkfile src="root.bp" dest="Android.bp" />
+    <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
+  </project>
+  <project path="build/blueprint" name="android_build_blueprint" remote="Dora" />
+  <project path="bootable/recovery" name="android_bootable_recovery" remote="Dora" />
+  <project path="development" name="development" remote="PEH" />
+  <project path="manifest" name="android_manifest" remote="Dora" />
+  <project path="platform_testing" name="android_platform_testing" remote="Dora" />
+  <project path="device/dora/sepolicy" name="android_device_dora_sepolicy" remote="Dora" />
+  <project path="vendor/dora" name="android_vendor_dora" remote="Dora" />
+  <project path="vendor/dora-preference" name="android_vendor_dora-preference" remote="Dora" />
+  <project path="vendor/pixel-framework" name="android_vendor_pixel-framework" remote="Dora" />
+
+  <!-- Hardware repos -->
+  <project path="hardware/broadcom/libbt" name="hardware_broadcom_libbt" remote="PEH" />
+  <project path="hardware/google/pixel" name="hardware_google_pixel" remote="PEH" />
+  <project path="hardware/interfaces" name="hardware_interfaces" remote="PEH" />
+  <project path="hardware/knowles/athletico/sound_trigger_hal" name="hardware_knowles_athletico_sound_trigger_hal" remote="PEH" />
+  <project path="hardware/libhardware" name="hardware_libhardware" remote="PEH" />
+  <project path="hardware/nxp/nfc" name="hardware_nxp_nfc" remote="PEH" />
+  <project path="hardware/qcom/audio" name="hardware_qcom_audio" remote="PEH" />
+  <project path="hardware/qcom/data/ipacfg-mgr" name="hardware_qcom_data_ipacfg-mgr" remote="PEH" />
+  <project path="hardware/qcom/camera" name="hardware_qcom_camera" remote="PEH" />
+  <project path="hardware/qcom/display" name="hardware_qcom_display" remote="PEH" />
+  <project path="hardware/qcom/gps" name="hardware_qcom_gps" remote="PEH" />
+  <project path="hardware/qcom/keymaster" name="hardware_qcom_keymaster" remote="PEH" />
+  <project path="hardware/qcom/media" name="hardware_qcom_media" remote="PEH" />
+  <project path="hardware/qcom/msm8998" name="hardware_qcom_msm8998" remote="PEH" />
+  <project path="hardware/qcom/sdm845/data/ipacfg-mgr" name="hardware_qcom_sdm845_data_ipacfg-mgr" remote="PEH" >
+    <linkfile src="os_pickup.bp" dest="hardware/qcom/sdm845/Android.bp" />
+  </project>
+  <project path="hardware/qcom/sdm845/display" name="hardware_qcom_sdm845_display" remote="PEH" />
+  <project path="hardware/qcom/sdm845/media" name="hardware_qcom_sdm845_media" remote="PEH" />
+  <project path="hardware/qcom/sm7250/display" name="hardware_qcom_sm7250_display" remote="PEH" />
+  <project path="hardware/qcom/sm7250/media" name="hardware_qcom_sm7250_media" remote="PEH" />
+  <project path="hardware/qcom/sm8150/data/ipacfg-mgr" name="hardware_qcom_sm8150_data_ipacfg-mgr" remote="PEH">
+    <linkfile src="os_pickup.mk" dest="hardware/qcom/sm8150/Android.mk" />
+    <linkfile src="os_pickup.bp" dest="hardware/qcom/sm8150/Android.bp" />
+  </project>
+  <project path="hardware/qcom/sm8150/display" name="hardware_qcom_sm8150_display" remote="PEH" />
+  <project path="hardware/qcom/sm8150/media" name="hardware_qcom_sm8150_media" remote="PEH" />
+  <project path="hardware/qcom/wlan" name="hardware_qcom_wlan" remote="PEH" />
+  <project path="hardware/ril" name="hardware_ril" remote="PEH" />
+  <project path="hardware/qcom-caf/bootctrl" name="hardware_qcom-caf_bootctrl" remote="PEH" />
+  <project path="hardware/qcom-caf/bt" name="hardware_qcom-caf_bt" remote="PEH" />
+  <project path="hardware/qcom-caf/thermal" name="hardware_qcom-caf_thermal" remote="PEH" />
+  <project path="hardware/qcom-caf/vr" name="hardware_qcom-caf_vr" remote="PEH" />
+  <project path="hardware/qcom-caf/wlan" name="hardware_qcom-caf_wlan" remote="PEH" />
+  <project path="hardware/dora/interfaces" name="android_hardware_dora_interfaces" remote="Dora" />
+  <project path="hardware/broadcom/nfc" name="hardware_broadcom_nfc" remote="PEH" />
+
+  <!-- Hardware repos - HALS -->
+  <project path="hardware/qcom-caf/common" name="hardware_qcom-caf_common" remote="PEH">
+    <!-- add guard for AOSP hardware/qcom dir -->
+    <linkfile src="os_pickup_aosp.mk" dest="hardware/qcom/Android.mk" />
+    <!-- for AOSP sdm845, we override os_pickup.mk -->
+    <linkfile src="os_pickup.mk" dest="hardware/qcom/sdm845/Android.mk" />
+    <!-- add guards for CAF repositories -->
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/apq8084/Android.mk" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/msm8916/Android.mk" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/msm8952/Android.mk" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/msm8960/Android.mk" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/msm8974/Android.mk" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/msm8994/Android.mk" />
+    <linkfile src="os_pickup.bp" dest="hardware/qcom-caf/msm8996/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/msm8996/Android.mk" />
+    <linkfile src="os_pickup.bp" dest="hardware/qcom-caf/msm8996-LA.UM.9.6.2.r1-04100-89xx.0/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/msm8996-LA.UM.9.6.2.r1-04100-89xx.0/Android.mk" />
+    <linkfile src="os_pickup.bp" dest="hardware/qcom-caf/msm8998/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/msm8998/Android.mk" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sdm845/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sdm845/Android.mk" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sm8150/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sm8150/Android.mk" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sm8150-common/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sm8150-common/Android.mk" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sm8250/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sm8250/Android.mk" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sm8350/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sm8350/Android.mk" />
+    <linkfile src="os_pickup.bp" dest="hardware/nxp/Android.bp" />
+    <linkfile src="os_pickup.bp" dest="vendor/nxp/opensource/pn5xx/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="vendor/nxp/opensource/pn5xx/Android.mk" />
+    <linkfile src="os_pickup.bp" dest="vendor/nxp/opensource/sn100x/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="vendor/nxp/opensource/sn100x/Android.mk" />
+  </project>
+  <project path="hardware/qcom-caf/msm8996/audio" name="hardware_qcom-caf_msm8996_audio" remote="PEH" />
+  <project path="hardware/qcom-caf/msm8996-LA.UM.9.6.2.r1-04100-89xx.0/audio" name="hardware_qcom-caf_msm8996_audio" remote="PEH" revision="twelve-LA.UM.9.6.2.r1-04100-89xx.0" />
+  <project path="hardware/qcom-caf/msm8996/display" name="hardware_qcom-caf_msm8996_display" remote="PEH" />
+  <project path="hardware/qcom-caf/msm8996-LA.UM.9.6.2.r1-04100-89xx.0/display" name="hardware_qcom-caf_msm8996_display" remote="PEH" revision="twelve-LA.UM.9.6.2.r1-04100-89xx.0" />
+  <project path="hardware/qcom-caf/msm8996/media" name="hardware_qcom-caf_msm8996_media" remote="PEH" />
+  <project path="hardware/qcom-caf/msm8996-LA.UM.9.6.2.r1-04100-89xx.0/media" name="hardware_qcom-caf_msm8996_media" remote="PEH" revision="twelve-LA.UM.9.6.2.r1-04100-89xx.0" />
+  <project path="hardware/qcom-caf/msm8998/audio" name="hardware_qcom-caf_msm8998_audio" remote="PEH" />
+  <project path="hardware/qcom-caf/msm8998/display" name="hardware_qcom-caf_msm8998_display" remote="PEH" />
+  <project path="hardware/qcom-caf/msm8998/media" name="hardware_qcom-caf_msm8998_media" remote="PEH" />
+  <project path="hardware/qcom-caf/sdm845/audio" name="hardware_qcom-caf_sdm845_audio" remote="PEH" />
+  <project path="hardware/qcom-caf/sdm845/display" name="hardware_qcom-caf_sdm845_display" remote="PEH" />
+  <project path="hardware/qcom-caf/sdm845/media" name="hardware_qcom-caf_sdm845_media" remote="PEH" />
+  <project path="hardware/qcom-caf/sm8150/audio" name="hardware_qcom-caf_sm8150_audio" remote="PEH" />
+  <project path="hardware/qcom-caf/sm8150/display" name="hardware_qcom-caf_sm8150_display" remote="PEH" />
+  <project path="hardware/qcom-caf/sm8150/media" name="hardware_qcom-caf_sm8150_media" remote="PEH" />
+  <project path="hardware/qcom-caf/sm8150-common/audio" name="hardware_qcom-caf_sm8150-common_audio" remote="PEH" revision="twelve" />
+  <project path="hardware/qcom-caf/sm8150-common/display" name="hardware_qcom-caf_sm8150-common_display" remote="PEH" revision="twelve" />
+  <project path="hardware/qcom-caf/sm8150-common/media" name="hardware_qcom-caf_sm8150-common_media" remote="PEH" revision="twelve" />
+  <project path="hardware/qcom-caf/sm8250/audio" name="hardware_qcom-caf_sm8250_audio" remote="PEH" />
+  <project path="hardware/qcom-caf/sm8250/display" name="hardware_qcom-caf_sm8250_display" remote="PEH" />
+  <project path="hardware/qcom-caf/sm8250/media" name="hardware_qcom-caf_sm8250_media" remote="PEH" />
+  <project path="hardware/qcom-caf/sm8350/audio" name="hardware_qcom-caf_sm8350_audio" remote="PEH" />
+  <project path="hardware/qcom-caf/sm8350/display" name="hardware_qcom-caf_sm8350_display" remote="PEH" />
+  <project path="hardware/qcom-caf/sm8350/media" name="hardware_qcom-caf_sm8350_media" remote="PEH" />
+
+  <!-- Packages repos -->
+  <project path="packages/apps/dora" name="android_DoraemonOS" remote="Dora" />
+  <project path="packages/apps/Bluetooth" name="android_packages_apps_Bluetooth" remote="Dora" />
+  <project path="packages/apps/Camera2" name="android_packages_apps_Camera2" remote="Dora" />
+  <project path="packages/apps/CarrierConfig" name="android_packages_apps_CarrierConfig" remote="Dora" />
+  <project path="packages/apps/Nfc" name="android_packages_apps_Nfc" remote="Dora" />
+  <project path="packages/apps/PhoneCommon" name="android_packages_apps_PhoneCommon" remote="Dora" />
+  <project path="packages/apps/Settings" name="android_packages_apps_Settings" remote="Dora" />
+  <project path="packages/apps/Stk" name="android_packages_apps_Stk" remote="Dora" />
+  <project path="packages/apps/Traceur" name="android_packages_apps_Traceur" remote="Dora" />
+  <project path="packages/modules/adb" name="android_packages_modules_adb" remote="Dora" />
+  <project path="packages/modules/Connectivity" name="android_packages_modules_Connectivity" remote="Dora" />
+  <project path="packages/modules/DnsResolver" name="android_packages_modules_DnsResolver" remote="Dora" />
+  <project path="packages/modules/NetworkStack" name="android_packages_modules_NetworkStack" remote="Dora" />
+  <project path="packages/providers/DownloadProvider" name="android_packages_providers_DownloadProvider" remote="Dora" />
+  <project path="packages/providers/MediaProvider" name="android_packages_providers_MediaProvider" remote="Dora" />
+  <project path="packages/services/BuiltInPrintService" name="android_packages_services_BuiltInPrintService" remote="Dora" />
+  <project path="packages/services/Telecomm" name="android_packages_services_Telecomm" remote="Dora" />
+  <project path="packages/services/Telephony" name="android_packages_services_Telephony" remote="Dora" />
+  <!--project path="packages/apps/FaceUnlockService" name="android_packages_apps_FaceUnlockService" remote="Dora" /-->
+  <project path="packages/apps/FMRadio" name="android_packages_apps_FMRadio" remote="Dora" />
+  <project path="packages/apps/SimpleDeviceConfig" name="android_packages_apps_SimpleDeviceConfig" remote="Dora" />
+  <!--project path="packages/apps/Snap" name="android_packages_apps_Snap" remote="Dora" /-->
+  <project path="packages/apps/Updates" name="android_packages_apps_Updates" remote="Dora" />
+  <project path="packages/apps/TouchGestures" name="android_packages_apps_TouchGestures" remote="Dora" />
+  <project path="packages/resources/devicesettings" name="android_packages_resources_devicesettings" remote="Dora" />
+
+  <!-- Prebuilts -->
+  <project path="prebuilts/build-tools" name="prebuilts_build-tools" remote="PEH" clone-depth="1" />
+  <project path="prebuilts/gcc/darwin-x86/aarch64/aarch64-linux-android-4.9" name="prebuilts_gcc_darwin-x86_aarch64_aarch64-linux-android-4.9" remote="PEH" clone-depth="1" />
+  <project path="prebuilts/gcc/darwin-x86/arm/arm-linux-androideabi-4.9" name="prebuilts_gcc_darwin-x86_arm_arm-linux-androideabi-4.9" remote="PEH" clone-depth="1" />
+  <project path="prebuilts/gcc/darwin-x86/x86/x86_64-linux-android-4.9" name="prebuilts_gcc_darwin-x86_x86_x86_64-linux-android-4.9" remote="PEH" clone-depth="1" />
+  <project path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" name="prebuilts_gcc_linux-x86_aarch64_aarch64-linux-android-4.9" remote="PEH" clone-depth="1" />
+  <project path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9" name="prebuilts_gcc_linux-x86_arm_arm-linux-androideabi-4.9" remote="PEH" clone-depth="1" />
+  <project path="prebuilts/gcc/linux-x86/x86/x86_64-linux-android-4.9" name="prebuilts_gcc_linux-x86_x86_x86_64-linux-android-4.9" remote="PEH" clone-depth="1" />
+  <project path="prebuilts/extract-tools" name="prebuilts_extract-tools" remote="PEH" clone-depth="1" />
+  <project path="prebuilts/tools-dora" name="prebuilts_tools-custom" remote="PEH" clone-depth="1" />
+
+  <!-- System Repos -->
+  <project path="system/bpf" name="android_system_bpf" remote="Dora" />
+  <project path="system/bt" name="android_system_bt" remote="Dora" />
+  <project path="system/core" name="android_system_core" remote="Dora" />
+  <project path="system/incremental_delivery" name="android_system_incremental_delivery" remote="Dora" />
+  <project path="system/libhwbinder" name="android_system_libhwbinder" remote="Dora" />
+  <project path="system/libufdt" name="android_system_libufdt" remote="Dora" />
+  <project path="system/libziparchive" name="android_system_libziparchive" remote="Dora" />
+  <project path="system/media" name="android_system_media" remote="Dora" />
+  <project path="system/netd" name="android_system_netd" remote="Dora" />
+  <project path="system/nfc" name="android_system_nfc" remote="Dora" />
+  <project path="system/security" name="android_system_security" remote="Dora" />
+  <project path="system/sepolicy" name="android_system_sepolicy" remote="Dora" />
+  <project path="system/timezone" name="android_system_timezone" remote="Dora" />
+  <project path="system/tools/hidl" name="android_system_tools_hidl" remote="Dora" />
+  <project path="system/tools/mkbootimg" name="android_system_tools_mkbootimg" remote="Dora" />
+  <project path="system/update_engine" name="android_system_update_engine" remote="Dora" />
+  <project path="system/vold" name="android_system_vold" remote="Dora" />
+  <project path="system/qcom" name="system_qcom" remote="PEH" />
+  <project path="system/tools/dtbtool" name="system_tools_dtbtool" remote="PEH" />
+
+  <!-- Tools Repos -->
+  <project path="tools/metalava" name="tools_metalava" remote="PEH" />
+  <project path="tools/extract-utils" name="tools_extract-utils" remote="PEH" />
+
+  <!-- Devices Repos -->
+  <project path="device/qcom/sepolicy" name="device_qcom_sepolicy" remote="PEH" />
+  <project path="device/qcom-LA.UM.10.3.r1-xxxxx-sdm845.0/sepolicy" name="device_qcom_sepolicy" remote="PEH" revision="twelve-LA.UM.10.3.r1-xxxxx-sdm845.0" />
+  <project path="device/qcom/sepolicy-legacy" name="device_qcom_sepolicy-legacy" remote="PEH" />
+  <project path="device/qcom/sepolicy-legacy-um" name="device_qcom_sepolicy-legacy-um" remote="PEH" />
+  <project path="device/qcom/sepolicy_vndr" name="device_qcom_sepolicy_vndr" remote="PEH" />
+  <project path="device/qcom-LA.UM.10.3.r1-xxxxx-sdm845.0/sepolicy_vndr" name="device_qcom_sepolicy_vndr" remote="PEH" revision="twelve-LA.UM.10.3.r1-xxxxx-sdm845.0" />
+
+  <!-- Vendor Repos -->
+  <project path="vendor/nxp/opensource/interfaces/nfc" name="vendor_nxp_opensource_interfaces_nfc" remote="PEH" />
+  <project path="vendor/nxp/opensource/commonsys/external/libnfc-nci" name="vendor_nxp_opensource_commonsys_external_libnfc-nci" remote="PEH" />
+  <project path="vendor/nxp/opensource/commonsys/frameworks" name="vendor_nxp_opensource_commonsys_frameworks" remote="PEH" />
+  <project path="vendor/nxp/opensource/commonsys/packages/apps/Nfc" name="vendor_nxp_opensource_commonsys_packages_apps_Nfc" remote="PEH" />
+  <project path="vendor/nxp/opensource/pn5xx/halimpl" name="vendor_nxp_opensource_pn5xx_halimpl" remote="PEH" />
+  <project path="vendor/nxp/opensource/pn5xx/hidlimpl" name="vendor_nxp_opensource_pn5xx_hidlimpl" remote="PEH" />
+  <project path="vendor/nxp/opensource/sn100x/halimpl" name="vendor_nxp_opensource_sn100x_halimpl" remote="PEH" />
+  <project path="vendor/nxp/opensource/sn100x/hidlimpl" name="vendor_nxp_opensource_sn100x_hidlimpl" remote="PEH" />
+  <project path="vendor/codeaurora/telephony" name="vendor_codeaurora_telephony" remote="PEH" />
+  <project path="vendor/qcom/opensource/audio" name="vendor_qcom_opensource_audio" remote="PEH" />
+  <project path="vendor/qcom/opensource/audio-hal/st-hal" name="vendor_qcom_opensource_audio-hal_st-hal" remote="PEH" />
+  <project path="vendor/qcom/opensource/commonsys-intf/bluetooth" name="vendor_qcom_opensource_commonsys-intf_bluetooth" remote="PEH" />
+  <project path="vendor/qcom/opensource/commonsys-intf/display" name="vendor_qcom_opensource_commonsys-intf_display" remote="PEH" />
+  <project path="vendor/qcom/opensource/commonsys/bluetooth_ext" name="vendor_qcom_opensource_commonsys_bluetooth_ext" remote="PEH" />
+  <project path="vendor/qcom/opensource/commonsys/display" name="vendor_qcom_opensource_commonsys_display" remote="PEH" />
+  <project path="vendor/qcom/opensource/commonsys/packages/apps/Bluetooth" name="vendor_qcom_opensource_commonsys_packages_apps_Bluetooth" remote="PEH" />
+  <project path="vendor/qcom/opensource/commonsys/system/bt" name="vendor_qcom_opensource_commonsys_system_bt" remote="PEH" />
+  <project path="vendor/qcom/opensource/cryptfs_hw" name="vendor_qcom_opensource_cryptfs_hw" remote="PEH" />
+  <project path="vendor/qcom/opensource/data-ipa-cfg-mgr" name="vendor_qcom_opensource_data-ipa-cfg-mgr" remote="PEH" />
+  <project path="vendor/qcom/opensource/dataservices" name="vendor_qcom_opensource_dataservices" remote="PEH" />
+  <project path="vendor/qcom/opensource/display" name="vendor_qcom_opensource_display" remote="PEH" />
+  <project path="vendor/qcom/opensource/commonsys/dpm" name="vendor_qcom_opensource_commonsys_dpm" remote="PEH" />
+  <project path="vendor/qcom/opensource/fm-commonsys" name="vendor_qcom_opensource_fm-commonsys" remote="PEH" />
+  <project path="vendor/qcom/opensource/healthd-ext" name="vendor_qcom_opensource_healthd-ext" remote="PEH" />
+  <project path="vendor/qcom/opensource/interfaces" name="vendor_qcom_opensource_interfaces" remote="PEH" />
+  <project path="vendor/qcom/opensource/libfmjni" name="vendor_qcom_opensource_libfmjni" remote="PEH" />
+  <project path="vendor/qcom/opensource/power" name="vendor_qcom_opensource_power" remote="PEH" />
+  <project path="vendor/qcom/opensource/thermal-engine" name="vendor_qcom_opensource_thermal-engine" remote="PEH" />
+  <project path="vendor/qcom/opensource/usb" name="vendor_qcom_opensource_usb" remote="PEH" />
+  <project path="vendor/qcom/opensource/vibrator" name="vendor_qcom_opensource_vibrator" remote="PEH" />
+  <project path="vendor/qcom/opensource/wfd-commonsys" name="vendor_qcom_opensource_wfd-commonsys" remote="PEH" />
+
+</manifest>

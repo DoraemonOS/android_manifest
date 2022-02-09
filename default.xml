@@ -1116,7 +1116,7 @@
   <include name="include/remove.xml" />
 
   <!-- Add all DoraemonOS repos -->
-  <include name="include/dora.xml" />
-  <include name="include/pixel.xml" />
+  <include name="include/github.xml" />
+  <include name="include/gitlab.xml" />
 
 </manifest>
