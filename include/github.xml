@@ -14,7 +14,7 @@
 
   <!-- General repos -->
   <project path="art" name="CherishOS/android_art" remote="github" revision="twelve" />
-  <project path="bionic" name="android_bionic" remote="Dora" />
+  <project path="bionic" name="CherishOS/android_bionic" remote="github" revision="twelve" />
   <project path="build/make" name="android_build_make" remote="Dora">
     <copyfile src="core/root.mk" dest="Makefile" />
     <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
