@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
+  <remote name="gitlab"
+          fetch="https://gitlab.com" />
+
   <remote name="PEL"
           fetch="https://gitlab.com/PixelExperience"
           revision="twelve" />

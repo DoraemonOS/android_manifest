@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
+  <remote name="github"
+          fetch="https://github.com/" />
+
   <remote name="Dora"
           fetch="https://github.com/DoraemonOS"
           revision="12" />
@@ -8,6 +11,29 @@
   <remote name="PEH"
           fetch="https://github.com/PixelExperience"
           revision="twelve" />
+
+  <!-- General repos -->
+  <project path="art" name="android_art" remote="Dora" />
+  <project path="bionic" name="android_bionic" remote="Dora" />
+  <project path="build/make" name="android_build_make" remote="Dora">
+    <copyfile src="core/root.mk" dest="Makefile" />
+    <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
+    <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
+    <linkfile src="core" dest="build/core" />
+    <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
+    <linkfile src="target" dest="build/target" />
+    <linkfile src="tools" dest="build/tools" />
+  </project>
+  <project path="build/soong" name="android_build_soong" remote="Dora" >
+    <linkfile src="root.bp" dest="Android.bp" />
+    <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
+  </project>
+  <project path="build/blueprint" name="android_build_blueprint" remote="Dora" />
+  <project path="bootable/recovery" name="android_bootable_recovery" remote="Dora" />
+  <project path="development" name="development" remote="PEH" />
+  <project path="manifest" name="android_manifest" remote="Dora" />
+  <project path="platform_testing" name="android_platform_testing" remote="Dora" />
+  <project path="libcore" name="CherishOS/android_libcore" remote="github" revision="twelve" />
 
   <!-- External repos -->
   <project path="external/boringssl" name="external_boringssl" remote="PEH" />
@@ -47,32 +73,6 @@
   <project path="frameworks/opt/net/wifi" name="android_frameworks_opt_net_wifi" remote="Dora" />
   <project path="frameworks/opt/telephony" name="android_frameworks_opt_telephony" remote="Dora" />
   <project path="frameworks/opt/timezonepicker" name="android_frameworks_opt_timezonepicker" remote="Dora" />
-
-  <!-- General repos -->
-  <project path="art" name="android_art" remote="Dora" />
-  <project path="bionic" name="android_bionic" remote="Dora" />
-  <project path="build/make" name="android_build_make" remote="Dora">
-    <copyfile src="core/root.mk" dest="Makefile" />
-    <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
-    <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
-    <linkfile src="core" dest="build/core" />
-    <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
-    <linkfile src="target" dest="build/target" />
-    <linkfile src="tools" dest="build/tools" />
-  </project>
-  <project path="build/soong" name="android_build_soong" remote="Dora" >
-    <linkfile src="root.bp" dest="Android.bp" />
-    <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
-  </project>
-  <project path="build/blueprint" name="android_build_blueprint" remote="Dora" />
-  <project path="bootable/recovery" name="android_bootable_recovery" remote="Dora" />
-  <project path="development" name="development" remote="PEH" />
-  <project path="manifest" name="android_manifest" remote="Dora" />
-  <project path="platform_testing" name="android_platform_testing" remote="Dora" />
-  <project path="device/dora/sepolicy" name="android_device_dora_sepolicy" remote="Dora" />
-  <project path="vendor/dora" name="android_vendor_dora" remote="Dora" />
-  <project path="vendor/dora-preference" name="android_vendor_dora-preference" remote="Dora" />
-  <project path="vendor/pixel-framework" name="android_vendor_pixel-framework" remote="Dora" />
 
   <!-- Hardware repos -->
   <project path="hardware/broadcom/libbt" name="hardware_broadcom_libbt" remote="PEH" />
@@ -242,6 +242,7 @@
   <project path="device/qcom/sepolicy-legacy-um" name="device_qcom_sepolicy-legacy-um" remote="PEH" />
   <project path="device/qcom/sepolicy_vndr" name="device_qcom_sepolicy_vndr" remote="PEH" />
   <project path="device/qcom-LA.UM.10.3.r1-xxxxx-sdm845.0/sepolicy_vndr" name="device_qcom_sepolicy_vndr" remote="PEH" revision="twelve-LA.UM.10.3.r1-xxxxx-sdm845.0" />
+  <project path="device/dora/sepolicy" name="android_device_dora_sepolicy" remote="Dora" />
 
   <!-- Vendor Repos -->
   <project path="vendor/nxp/opensource/interfaces/nfc" name="vendor_nxp_opensource_interfaces_nfc" remote="PEH" />
@@ -275,5 +276,9 @@
   <project path="vendor/qcom/opensource/usb" name="vendor_qcom_opensource_usb" remote="PEH" />
   <project path="vendor/qcom/opensource/vibrator" name="vendor_qcom_opensource_vibrator" remote="PEH" />
   <project path="vendor/qcom/opensource/wfd-commonsys" name="vendor_qcom_opensource_wfd-commonsys" remote="PEH" />
+  <project path="vendor/dora" name="android_vendor_dora" remote="Dora" />
+  <project path="vendor/dora-preference" name="android_vendor_dora-preference" remote="Dora" />
+  <project path="vendor/pixel-framework" name="android_vendor_pixel-framework" remote="Dora" />
+
 
 </manifest>
