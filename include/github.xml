@@ -1,16 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
-  <remote name="github"
-          fetch="https://github.com/" />
+  <!-- Github -->
+  <remote  name="github"
+           fetch="https://github.com/" />
 
-  <remote name="Dora"
-          fetch="https://github.com/DoraemonOS"
-          revision="12" />
-
-  <remote name="PEH"
-          fetch="https://github.com/PixelExperience"
-          revision="twelve" />
+  <!-- GitHub -->
+  <remote  name="Dora"
+           fetch="https://github.com/DoraemonOS/"
+           revision="12" />
+           
+  <!-- GitHub -->
+  <remote  name="cherish"
+           fetch="https://github.com/CherishOS/"
+           revision="twelve" />
+		   		   
+  <remote  name="arrow"
+           fetch="https://github.com/ArrowOS"
+           review="https://review.arrowos.net/"
+           revision="refs/heads/arrow-12.0" />
 
   <!-- General repos -->
   <project path="art" name="CherishOS/android_art" remote="github" revision="twelve" />
@@ -63,7 +71,7 @@
   <project path="external/ntfs-3g" name="external_ntfs-3g" remote="PEH" />
   <project path="external/tinyxml" name="external_tinyxml" remote="PEH" />
   <project path="external/colorkt" name="kdrag0n/colorkt" remote="github" revision="main" />
-  <project path="external/themelib" name="ArrowOS/android_external_themelib" remote="github" revision="Arrow-12.0" />
+  <project path="external/themelib" name="ArrowOS/android_external_themelib" remote="github" revision="arrow" />
 
   <!-- Framework repos -->
   <project path="frameworks/av" name="android_frameworks_av" remote="Dora" />
