@@ -14,6 +14,10 @@
     <remote name="PEH"
           fetch="https://github.com/PixelExperience"
           revision="twelve" />
+
+  <!-- Create Symlink -->
+  <project path="device" name="DoraemonOS/symlink" remote="github" revision="master" />
+    <linkfile src="dora" dest="device/custom" />
            
   <!-- General repos -->
   <project path="art" name="CherishOS/android_art" remote="github" revision="twelve" />
