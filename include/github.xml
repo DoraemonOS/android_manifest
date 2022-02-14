@@ -201,6 +201,7 @@
   <project path="packages/apps/Updates" name="android_packages_apps_Updates" remote="Dora" />
   <project path="packages/apps/TouchGestures" name="android_packages_apps_TouchGestures" remote="Dora" />
   <project path="packages/resources/devicesettings" name="packages_resources_devicesettings" remote="PEH" />
+  <project path="vendor/lawnchair" name="arter97/android_vendor_lawnchair" remote="github" revision="master" />
 
   <!-- Prebuilts -->
   <project path="prebuilts/build-tools" name="prebuilts_build-tools" remote="PEH" clone-depth="1" />
