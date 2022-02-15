@@ -36,7 +36,7 @@
   <project path="development" name="development" remote="PEH" />
   <project path="manifest" name="android_manifest" remote="Dora" />
   <project path="platform_testing" name="android_platform_testing" remote="Dora" />
-  <project path="libcore" name="CherishOS/android_libcore" remote="github" revision="twelve" />
+  <project path="libcore" name="android_libcore" remote="Dora" />
 
   <!-- External repos -->
   <project path="external/boringssl" name="external_boringssl" remote="PEH" />
