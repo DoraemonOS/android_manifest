@@ -174,7 +174,12 @@ Type : lunch dora_whyred-user
 ```bash
 mka bacon -j$(nproc --all)
 ```
-
+⚠️⚠️⚠️
+You need add some stuff to dora_codename.mk for build:
+```bash
+DORA_BUILD_TYPE := OFFICIAL or UNOFFICIAL
+DORA_MAINTAINER := You Name
+```
 -----------------------------------------------------------------------------
 
  Credits :
