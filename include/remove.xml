@@ -160,6 +160,7 @@
   <remove-project name="platform/packages/apps/Traceur" />
   <remove-project name="platform/packages/apps/WallpaperPicker" />
   <remove-project name="platform/packages/inputmethods/LatinIME" />
+  <remove-project name="platform/packages/modules/Wifi" />
   <remove-project name="platform/packages/modules/adb" />
   <remove-project name="platform/packages/modules/Connectivity" />
   <remove-project name="platform/packages/modules/DnsResolver" />

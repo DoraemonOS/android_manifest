@@ -185,6 +185,7 @@
   <project path="packages/apps/Settings" name="android_packages_apps_Settings" remote="Dora" />
   <project path="packages/apps/Stk" name="android_packages_apps_Stk" remote="Dora" />
   <project path="packages/apps/Traceur" name="android_packages_apps_Traceur" remote="Dora" />
+  <project path="packages/modules/Wifi" name="android_packages_modules_Wifi" remote="Dora" />
   <project path="packages/modules/adb" name="android_packages_modules_adb" remote="Dora" />
   <project path="packages/modules/Connectivity" name="android_packages_modules_Connectivity" remote="Dora" />
   <project path="packages/modules/DnsResolver" name="android_packages_modules_DnsResolver" remote="Dora" />
