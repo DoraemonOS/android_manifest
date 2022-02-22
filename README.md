@@ -96,6 +96,10 @@ Or Packages Repo Full :
 ```bash
 repo sync -j$(nproc --all)
 ```
+Or Repos no old commit
+```bash
+repo sync -f -j$(nproc --all) --force-sync --no-clone-bundle --no-tags --depth="1"
+```
 # Devices Tree #
 And Git Clone Device Tree / Vendor / Kernel :
 Source Device Tree :
