@@ -5,9 +5,9 @@
           fetch="https://gitlab.com" />
 
   <!-- PixelExperience Gapps -->
-  <!-- <project path="vendor/gapps" name="PixelExperience/vendor_gapps" remote="gitlab" clone-depth="1" /> -->
+  <!-- <project path="vendor/gapps" name="PixelExperience/vendor_gapps" remote="gitlab" revision="twelve" clone-depth="1" /> -->
 
   <!-- PixysOS Gapps -->
-  <project path="vendor/gapps" name="PixysOS/vendor_gapps_twelve" remote="gitlab" clone-depth="1" />
+  <project path="vendor/gapps" name="PixysOS/vendor_gapps_twelve" remote="gitlab" revision="twelve" clone-depth="1" />
 
 </manifest>
