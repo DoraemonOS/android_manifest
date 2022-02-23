@@ -285,4 +285,5 @@
   <project path="vendor/dora-preference" name="android_vendor_dora-preference" remote="Dora" />
   <project path="vendor/pixel-framework" name="android_vendor_pixel-framework" remote="Dora" />
   <project path="vendor/support" name="android_vendor_support" remote="Dora" />
+  <project path="vendor/lawnicons" name="ProtonAOSP/android_vendor_lawnicons" remote="github" revision="sc" />
 </manifest>
